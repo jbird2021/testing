@@ -1,0 +1,4 @@
+collections:
+  # directory containing the collection
+  - source: ./my_namespace/my_collection/
+    type: dir
