@@ -1,7 +1,11 @@
 - name: Hello World Sample
-  hosts: all
+  hosts: localhost
   gather_facts: False
   tasks:   
     - name: Say Hello
       debug:
         msg: "Hello World!"
+    - name: Send a message with a link using Slack markup
+      community.general.slack:
+        token: thetoken/generatedby/slack
+        msg: We sent this message using <https://www.ansible.com|Ansible>!
